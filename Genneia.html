@@ -1,0 +1,791 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+        /* cyrillic-ext */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_cJD3gTD_u50.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_cJD3g3D_u50.woff2) format('woff2');
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_cJD3gbD_u50.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_cJD3gfD_u50.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_cJD3gnD_g.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* cyrillic-ext */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* cyrillic-ext */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC3gTD_u50.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC3g3D_u50.woff2) format('woff2');
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC3gbD_u50.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC3gfD_u50.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC3gnD_g.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* cyrillic-ext */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gTD_u50.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3g3D_u50.woff2) format('woff2');
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gbD_u50.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gfD_u50.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gnD_g.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        body * {
+            font-family: 'Montserrat', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body><u></u>
+
+
+
+
+
+
+    <div>
+        <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+            <tbody>
+                <tr>
+                    <td><a href="https://www.google.com/url?q=https://www.genneia.com.ar/&amp;source=gmail-html&amp;ust=1663442996721000&amp;usg=AOvVaw1Q634CAOEfNmyaSZUk0MHi"
+                            target="_blank" rel="noreferrer"><img
+                                src="https://ci3.googleusercontent.com/proxy/8KxUTDS-VaZdegYAdrXAuNUlor9BD_fZQinSIN7g2kbfsiiNcr3oRyxn1u_geBS4HpzTtr-tKOQz_ENBwX2BKCEqOQ=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-02.jpg"
+                                width="600" height="175" alt="Genneia"></a></td>
+                </tr>
+                <tr>
+                    <td style="padding:20px 0">
+                        <table width="500" border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td width="37"><img
+                                            src="https://ci3.googleusercontent.com/proxy/4n3hr6H1-Mf37NdAm0PtwyPpDf3_vkv51v7HZjulTuSVzsSNDE-uTcVkiLZEIMAU8gUDz_7Q0tAX3jDSFGb0j3WrGg=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-03.jpg"
+                                            width="28" height="28" alt=""></td>
+                                    <td width="473" style="text-transform:uppercase;color:#01bbe1;font-size:16px">
+                                        PANORAMA</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"
+                                        style="font-weight:bold;padding:10px 0;color:#3a3a3a;font-size:20px">
+                                        Resultados y desafíos de la energía renovable</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://ci4.googleusercontent.com/proxy/GQU04Yp-xCeP3V8Stm_-Wt_VJAMKdG751xqpwZXpa_-yokyGw1Dt_2K-eRkgtqBQvixi6gyR2svS5QyqaFamb-FrVQ=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-04.jpg"
+                            width="601" height="287"
+                            alt="La generación de energía eólica ya permite al país ahorrar divisas"></td>
+                </tr>
+                <tr>
+                    <td style="padding:30px 0;border-bottom:2px solid #e5e5e5">
+                        <table width="500" border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td width="51" valign="top"><img
+                                            src="https://ci4.googleusercontent.com/proxy/1WXHMrk2DDVtAv05Xow-nuL1WTATnocNXXIPBUhAm8MRblhqfh79SYC5EmJCOTeKQ6ySr7LeiYiPIYfYEvNsiqEVtA=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-05.jpg"
+                                            width="26" height="29" alt=""></td>
+                                    <td width="459"
+                                        style="color:#3a3a3a;font-size:14px;line-height:20px;padding-bottom:25px">
+                                        La generación de energía eólica ya permite al país ahorrar divisas. A los
+                                        precios actuales,
+                                        <b>evita pagos al exterior por u$s 3.250 millones</b>, un monto 4 veces
+                                        mayor que en 2021,
+                                        según un estudio de la Cámara Eólica Argentina.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="51" valign="top"><img
+                                            src="https://ci4.googleusercontent.com/proxy/1WXHMrk2DDVtAv05Xow-nuL1WTATnocNXXIPBUhAm8MRblhqfh79SYC5EmJCOTeKQ6ySr7LeiYiPIYfYEvNsiqEVtA=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-05.jpg"
+                                            width="26" height="29" alt=""></td>
+                                    <td width="459"
+                                        style="color:#3a3a3a;font-size:14px;line-height:20px;padding-bottom:25px">
+                                        Ese no es el único impacto socioeconómico de la energía eólica que, sólo en la
+                                        fabricación de aerogeneradores, <b>genera 2300 empleos ‘verdes’ cada 1.000 MW
+                                            adicionales de potencia.</b></td>
+                                </tr>
+                                <tr>
+                                    <td width="51" valign="top"><img
+                                            src="https://ci4.googleusercontent.com/proxy/1WXHMrk2DDVtAv05Xow-nuL1WTATnocNXXIPBUhAm8MRblhqfh79SYC5EmJCOTeKQ6ySr7LeiYiPIYfYEvNsiqEVtA=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-05.jpg"
+                                            width="26" height="29" alt=""></td>
+                                    <td width="459"
+                                        style="color:#3a3a3a;font-size:14px;line-height:20px;padding-bottom:25px">
+                                        Un gran paso. La Argentina firmó la adhesión a la <b>Agencia Internacional de
+                                            Energía (IEA)</b> y ahora está entre los países líderes para discutir
+                                        acciones en el contexto de la crisis energética mundial.</td>
+                                </tr>
+                                <tr>
+                                    <td width="51" valign="top"><img
+                                            src="https://ci4.googleusercontent.com/proxy/1WXHMrk2DDVtAv05Xow-nuL1WTATnocNXXIPBUhAm8MRblhqfh79SYC5EmJCOTeKQ6ySr7LeiYiPIYfYEvNsiqEVtA=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-05.jpg"
+                                            width="26" height="29" alt=""></td>
+                                    <td width="459"
+                                        style="color:#3a3a3a;font-size:14px;line-height:20px;padding-bottom:25px">
+                                        El país fue uno de los 7 países que, <b>en 2021, generaron más de una décima
+                                            parte de la electricidad a partir de las energías eólica y solar</b>. Ya son
+                                        50 naciones en el mundo que lograron esta meta.</td>
+                                </tr>
+                                <tr>
+                                    <td width="51" valign="top"></td>
+                                    <td width="459">
+                                        <table width="150" border="0" cellspacing="0" cellpadding="0"
+                                            style="background-color:#01bbe1">
+                                            <tbody>
+                                                <tr>
+                                                    <td
+                                                        style="padding:15px;color:#ffffff;font-weight:bole;text-transform:uppercase;font-size:14px;text-align:center">
+                                                        <a href="https://www.genneia.com.ar/site/novedad-interior.php?novedad=250-resultados-y-desaf%C3%ADos-de-la-energ%C3%ADa-renovable-"
+                                                            style="color:#fff;text-decoration:none"
+                                                            rel="noreferrer">SABER MÁS</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top:20px">
+                        <table width="500" border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2"
+                                        style="font-weight:bold;padding:10px 0;color:#3a3a3a;font-size:20px">
+                                        La importancia del MATER en la transición energética</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center"><img
+                                            src="https://ci4.googleusercontent.com/proxy/TcTxsDX-Q6ULSSdaH5Q2BDApzKRcjEStB8-Zk7HCtVyFQsfmNSP8WwscdmEfisYdO3meSrPGurHvqSYn1eZj6sg9Kug=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-07B.jpg"
+                                            width="505" height="197" alt="Mercado a Término de Energía Eléctrica"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"
+                                        style="color:#3a3a3a;font-size:14px;line-height:20px;padding:5px 0 25px 0"
+                                        valign="top">
+                                        <p>Hoy las empresas buscan asumir el compromiso de crear organizaciones más
+                                            verdes.
+                                            Así, los grandes usuarios quieren ejercer su derecho de libre negociación en
+                                            la compra de energías limpias.</p>
+                                        <p>Para responder a esta demanda, <b>Genneia</b> ofrece contratos de suministro
+                                            a largo plazo (PPA) a más de <b>20</b> clientes y está construyendo un nuevo
+                                            proyecto <b>fotovoltaico: Sierras de Ullum</b>, en la Provincia de San Juan.
+                                        </p>
+                                        <p>En la última licitación, además, obtuvo prioridad de despacho de 2 nuevos
+                                            proyectos:
+                                            el <b>Parque Solar Tocota III </b>de 60 MW, en San Juan, y el <b>Parque
+                                                Eólico La Elbita</b> de 103,5 MW en Tandil.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left:50px">
+                        <table width="150" border="0" cellspacing="0" cellpadding="0" style="background-color:#01bbe1">
+                            <tbody>
+                                <tr>
+                                    <td
+                                        style="padding:15px;color:#ffffff;font-weight:bole;text-transform:uppercase;font-size:15px;text-align:center">
+                                        <a href="https://www.genneia.com.ar/site/novedad-interior.php?novedad=257-la-importancia-del-mater-en-la-transici%C3%B3n-energ%C3%A9tica"
+                                            style="color:#fff;text-decoration:none" rel="noreferrer">SABER MÁS</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:30px 0">
+                        <table width="500" border="0" cellspacing="0" cellpadding="0" align="center"
+                            style="background-color:#75bc1e">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2"
+                                        style="font-size:20px;line-height:35px;font-weight:400;padding:25px 35px">
+                                        La nación que lidere las energías renovables <span
+                                            style="color:#fff;font-weight:400">será la nación que lidere el mundo dentro
+                                            de los próximos 20 años.</span> </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="padding-left:35px">
+                                        <table width="75" border="0" cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td><img src="https://ci4.googleusercontent.com/proxy/fLbvZSuHIGX2VRxwQQ012vefFJxbSHGaK9p3F1zKYD_rDq-SdXsvSK8nk8TGac3XRRKZbMJ8tFKmIv77awK-YFZZ=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/separador.png"
+                                                            width="74" height="9" alt=""></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        style="font-size:14px;line-height:35px;font-weight:400;padding:18px 35px 25px 35px">
+                                        James Cameron, <span style="color:#fff">director de Avatar.</span></td>
+                                    <td><img src="https://ci5.googleusercontent.com/proxy/Hy-CoxeD_6ZOg5EnYYRkDTC0BAJhDUM5wFb2-nnm_pRqdBhBBSF41vCd8vWZcIk0GPupVZXbj3fu0QGmnxYUsge9UA=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-08.jpg"
+                                            width="90" height="52" alt=""></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top:20px">
+                        <table width="500" border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td width="40"><img
+                                            src="https://ci4.googleusercontent.com/proxy/QZ5UVrbhH-LRLJcxaSQABZZPRpFNudQRLM8UmoTQpPyap6HpYfArx-HqYfuW0FEGCWfbK1fUlL4XX8Xxq86g22dI_g=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-09.jpg"
+                                            alt=""></td>
+                                    <td width="460" style="text-transform:uppercase;color:#01bbe1;font-size:16px">
+                                        FINANZAS VERDES</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"
+                                        style="font-weight:bold;padding:10px 0;color:#3a3a3a;font-size:20px">
+                                        El 2021, el año en que las emisiones de bonos sustentables fueron récord.</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center"><img
+                                            src="https://ci5.googleusercontent.com/proxy/1cWH5RAkWnQdaODA9X_tnIxb5gjCZYk1RKZGGPwbY5epsvX7vpNuj0xjA0880fYP98gHxqDI_IT6YrG8adaF3cFT7Q=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-10.jpg"
+                                            alt="2021, año récord de emisión de bonos sustentables"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"
+                                        style="color:#3a3a3a;font-size:14px;line-height:20px;padding:5px 0 25px 0"
+                                        valign="top">
+                                        <p>Las <b>finanzas sostenibles</b> están tomando cada vez más fuerza, en
+                                            especial la emisión de bonos verdes, sociales y sustentables que, en 2021,
+                                            alcanzaron volumen récord.</p>
+                                        <p>Así, por ejemplo, el <b>Panel de Bonos SVS de Bolsa y Mercados Argentinos</b>
+                                            pasó de emitir un bono en 2019 a terminar el último año con <b>13 valores
+                                                negociables</b> etiquetados vigentes en su Panel. </p>
+                                        <p>El 2021 fue un gran año para nuestra empresa: el mercado y los inversores
+                                            demostraron su confianza en nuestra gestión convirtiéndonos en el
+                                            <b>principal emisor de bonos verdes del país tras la emisión de 5 valores
+                                                negociables por un monto total de u$s 130 millones. </b>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left:50px">
+                        <table width="150" border="0" cellspacing="0" cellpadding="0" style="background-color:#01bbe1">
+                            <tbody>
+                                <tr>
+                                    <td
+                                        style="padding:15px;color:#ffffff;font-weight:bole;text-transform:uppercase;font-size:14px;text-align:center">
+                                        <a href="https://www.genneia.com.ar/site/novedad-interior.php?novedad=251-a%C3%B1o-r%C3%A9cord-de-emisi%C3%B3n-de-bonos-sustentables"
+                                            style="color:#fff;text-decoration:none" rel="noreferrer">AMPLIAR</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:30px 0 20px 0">
+                        <table width="500" border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td width="37"><img
+                                            src="https://ci4.googleusercontent.com/proxy/aOZvSgXqf9JifU-kn_FZb29rYeX982xUrImYY8Qobq1iVVh3xOnQe8i7w_SFU7jjTiPEIAFnGxvfWegcnAYOHNsxOA=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-11.jpg"
+                                            alt=""></td>
+                                    <td width="473" style="text-transform:uppercase;color:#01bbe1;font-size:16px">
+                                        FLASH</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="500" border="0" cellspacing="0" cellpadding="0" align="center"
+                            style="background-color:#f4f4f4">
+                            <tbody>
+                                <tr>
+                                    <td
+                                        style="color:#3a3a3a;font-size:14px;line-height:20px;padding:20px 30px 40px 30px">
+                                        <b>Temporada de reconocimientos</b>. Somos parte de los mejores rankings del
+                                        país.
+                                        Estamos en la posición 29 entre las 100 empresas con mejor imagen del país.
+                                        Compartimos ese #Top30 con <b>Globant, YPF, Mercado Libre, Arcor</b> y
+                                        <b>Unilever</b>.
+                                        Ingresamos al <b>#Top25</b> del Ranking de Mejores Empresas de la revista
+                                        Fortuna.
+                                        Y alcanzamos el puesto 64 en el ranking de Mejores Empleadores de Apertura.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:0 30px 15px 30px">
+                                        <table width="150" border="0" cellspacing="0" cellpadding="0"
+                                            style="background-color:#01bbe1">
+                                            <tbody>
+                                                <tr>
+                                                    <td
+                                                        style="padding:15px;color:#ffffff;font-weight:bole;text-transform:uppercase;font-size:14px;text-align:center">
+                                                        <a href="https://www.genneia.com.ar/site/novedad-interior.php?novedad=254-genneia-entre-las-mejores-empresas-del-pa%C3%ADs"
+                                                            style="color:#fff;text-decoration:none"
+                                                            rel="noreferrer">AMPLIAR</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:20px 0 40px">
+                        <table width="500" border="0" cellspacing="0" cellpadding="0" align="center"
+                            style="background-color:#f4f4f4">
+                            <tbody>
+                                <tr>
+                                    <td
+                                        style="color:#3a3a3a;font-size:14px;line-height:20px;padding:20px 30px 40px 30px">
+                                        <b>Más inversiones</b>. Con la adjudicación de 2 nuevos parques en San Juan y
+                                        Buenos Aires,
+                                        proyectamos inversiones por más de <b>USD 200 millones</b> y nos convertiremos
+                                        en la
+                                        primera empresa del sector en superar 1 GW de capacidad instalada renovable en
+                                        el país.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:0 30px 15px 30px">
+                                        <table width="150" border="0" cellspacing="0" cellpadding="0"
+                                            style="background-color:#01bbe1">
+                                            <tbody>
+                                                <tr>
+                                                    <td
+                                                        style="padding:15px;color:#ffffff;font-weight:bole;text-transform:uppercase;font-size:14px;text-align:center">
+                                                        <a href="https://www.genneia.com.ar/site/novedad-interior.php?novedad=222-genneia-anuncia-nuevas-inversiones-en-energ%C3%ADas-renovables"
+                                                            style="color:#fff; text-decoration:none"
+                                                            rel="noreferrer">AMPLIAR</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.google.com/url?q=https://www.genneia.com.ar/&amp;source=gmail-html&amp;ust=1663442996722000&amp;usg=AOvVaw36bBhWwvz-5Rld7p7iugxR"
+                            target="_blank" rel="noreferrer"><img
+                                src="https://ci6.googleusercontent.com/proxy/XFqkoCWnoaYGVdCs2MSFOOkoTDvyjtxJ9rHo6pWWk_-h6f2RiqTzWpO1xbFyNrBzUvxxiY3MganKWn1uZ-cHWXLsAw=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-12.jpg"
+                                width="600" height="359"
+                                alt="Genneía generó 3.560.000  milivatio-hora anuales de energía limpia"></a></td>
+                </tr>
+                <tr>
+                    <td style="padding:30px 0 20px 0">
+                        <table width="500" border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td width="37"><img
+                                            src="https://ci5.googleusercontent.com/proxy/nicYKRUyRakwzM3yJzyNJ4O9mAbwhIUOHl6Dz3ihEWyJt-FSXB1PbVOr0Hj-5axesuDp_oAp-AX8oOnzh5GF-mLJOg=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-13.jpg"
+                                            alt=""></td>
+                                    <td width="473" style="text-transform:uppercase;color:#01bbe1;font-size:16px">
+                                        CASO DE ÉXITO</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="500" border="0" cellspacing="0" cellpadding="0" align="center"
+                            style="background-color:#ebf3fa">
+                            <tbody>
+                                <tr>
+                                    <td style="font-weight:bold;padding:25px;color:#3a3a3a;font-size:24px">
+                                        El tenis y el fútbol dan el ejemplo y compensan su huella de carbono </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" valign="bottom">
+                        <table width="555" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <td width="555" height="234"><img
+                                            src="https://www.genneia.com.ar/site/contenido/NOVEDAD63373e8c79c1bgreen_pelota.jpg"
+                                            width="555" height="234"
+                                            alt="Torneos y Competencias se alió con Genneia para compensar emisiones de carbono de 2 "
+                                            style="display:block"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <table width="500" border="0" cellspacing="0" cellpadding="0" align="center"
+                            style="background-color:#ebf3fa">
+                            <tbody>
+                                <tr>
+                                    <td style="padding:30px 0">
+                                        <table width="450" border="0" cellspacing="0" cellpadding="0" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="51" valign="top"><img
+                                                            src="https://ci3.googleusercontent.com/proxy/K59SLw24P77xjMq9JGpTIex6bKFDYJx-0eWoTI_sAPL_00USCviaUym33dZFjCWkgYfh00RdbqbfVEmxyr-rIqiL7g=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-15.jpg"
+                                                            width="26" height="29" alt=""></td>
+                                                    <td width="459"
+                                                        style="color:#3a3a3a;font-size:14px;line-height:20px;padding-bottom:25px">
+                                                        Con el apoyo de Genneia, Torneos compensó las emisiones de
+                                                        carbono de 2 de los
+                                                        eventos deportivos más importantes que organiza: el ATP 250
+                                                        Córdoba Open 2022
+                                                        y la final de la Copa Argentina.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="51" valign="top"><img
+                                                            src="https://ci3.googleusercontent.com/proxy/K59SLw24P77xjMq9JGpTIex6bKFDYJx-0eWoTI_sAPL_00USCviaUym33dZFjCWkgYfh00RdbqbfVEmxyr-rIqiL7g=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-15.jpg"
+                                                            width="26" height="29" alt=""></td>
+                                                    <td width="459"
+                                                        style="color:#3a3a3a;font-size:14px;line-height:20px;padding-bottom:25px">
+                                                        Es el tercer año consecutivo que el ATP 250 Córdoba Open
+                                                        compensa su huella
+                                                        de carbono. En este caso, 400 toneladas las emisiones de
+                                                        carbono.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="51" valign="top"><img
+                                                            src="https://ci3.googleusercontent.com/proxy/K59SLw24P77xjMq9JGpTIex6bKFDYJx-0eWoTI_sAPL_00USCviaUym33dZFjCWkgYfh00RdbqbfVEmxyr-rIqiL7g=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-15.jpg"
+                                                            width="26" height="29" alt=""></td>
+                                                    <td width="459"
+                                                        style="color:#3a3a3a;font-size:14px;line-height:20px;padding-bottom:25px">
+                                                        La final de la Copa Argentina 2021 fue el primer partido de
+                                                        fútbol nacional
+                                                        en compensar sus emisiones..</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="51" valign="top"></td>
+                                                    <td width="459">
+                                                        <table width="150" border="0" cellspacing="0" cellpadding="0"
+                                                            style="background-color:#01bbe1">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td
+                                                                        style="padding:15px;color:#ffffff;font-weight:bole;text-transform:uppercase;font-size:14px;text-align:center">
+                                                                        <a href="https://www.genneia.com.ar/site/novedad-interior.php?novedad=252-el-tenis-como-el-f%C3%BAtbol-dan-el-ejemplo-y-compensan-su-huella-de-carbono"
+                                                                            style="color:#fff;text-decoration:none"
+                                                                            rel="noreferrer">AMPLIAR</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" style="padding-top:30px" valign="bottom">
+                        <table width="500" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <td width="500" height="184"><img
+                                            src="https://ci6.googleusercontent.com/proxy/BA52jsJ4cc0z2VNKTUJKS1wxdEUD3sBDIgAFxnnD-BXYl6XCtREPY54wBW7qtBzIr7tD270QW2gSz7FDFEI9XRGyEw=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-16.jpg"
+                                            width="500" height="184" alt="Barrilete que genera energía limpia "
+                                            style="display:block"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" style="padding-bottom:35px">
+                        <table width="500" border="0" cellspacing="0" cellpadding="0" align="center"
+                            style="background-color:#01bbe1">
+                            <tbody>
+                                <tr>
+                                    <td width="427"
+                                        style="font-size:16px;color:#000000;padding:30px 30px;line-height:22px;font-weight:200">
+                                        <span style="font-size:24px;font-weight:bold;color:#000000">¿Sabías
+                                            qué...</span><br><br>hasta los barriletes generan energía. En Mauricio, una
+                                        pequeña isla de África Oriental, utilizan una gran cometa unida al suelo a
+                                        través de un cable es capaz de generar electricidad para alimentar a unos 50
+                                        hogares. Barrilete cósmico ¿de qué planeta viniste?
+                                    </td>
+                                    <td width="73" valign="bottom"><img
+                                            src="https://ci4.googleusercontent.com/proxy/ZljlYyHhNL9NvCJnnwq5XKZFVptPq5SHnj6vs4yr-hvYzxlETkHK9z8kZtapFGqPWM-_aRFJsmUw_9LnTxP7OneugA=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-17.jpg"
+                                            width="37" height="92" alt=""></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                <tr>
+                    <td style="padding:30px 0 20px 0">
+                        <table width="500" border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td width="37"><img src="" alt=""></td>
+                                    <td width="473" style="text-transform:uppercase;color:#01bbe1;font-size:13px">
+                                        NOSOTROS</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="500" border="0" cellspacing="0" cellpadding="0" align="center"
+                            style="background-color:#f4f4f4">
+                            <tbody>
+                                <tr>
+                                    <td
+                                        style="color:#3a3a3a;font-size:12px;line-height:20px;padding:20px 30px 40px 30px">
+                                        Genneia es la compañía líder en la provisión de soluciones energéticas
+                                        sustentables en Argentina, con un 18% de participación en la matriz renovable,
+                                        alcanzando el 24% de la capacidad instalada de energía eólica y el 8% de la
+                                        solar, lo que la convierte en la líder indiscutida del sector y una de las 15
+                                        generadoras más importantes de Sudamérica, ocupando actualmente la posición
+                                        número 11. </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="background-color:#75bc1e;">
+                                        <table width="400" border="0" cellspacing="0" cellpadding="0" padding="20px">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <table width="220" border="0" cellspacing="0" cellpadding="0"
+                                                            align="center">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="center"><img
+                                                                            src="https://ci6.googleusercontent.com/proxy/lsnxGcFmWKIhRKwO_osr7p0D1v71a8LAMfc2Clmm7dZYC1RNzrc4flJZmPAmX1aOKjJrX4Hoe5tpdMK-x7neLkI6sw=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-18.jpg"
+                                                                            width="167" height="72" alt=""></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <table width="167" border="0" cellspacing="0"
+                                                                            cellpadding="0" align="center">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center"><a
+                                                                                            href="https://www.google.com/url?q=https://www.linkedin.com/company/genneia-s-a-/&amp;source=gmail-html&amp;ust=1663442996722000&amp;usg=AOvVaw2qG82JLk5uboY-5gQmURRe"
+                                                                                            target="_blank"
+                                                                                            rel="noreferrer"><img
+                                                                                                src="https://ci4.googleusercontent.com/proxy/AAybXN5-rEttg96qSCZA5y8BRlBSiYdQ7hctC9IZ21OWejzqdLgGW8CqaIl8Bx-USSsxC32RjCfrT8JdCQVE6bilsw=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-19.jpg"
+                                                                                                width="33" height="32"
+                                                                                                alt="Linkedin"></a></td>
+                                                                                    <td align="center"><a
+                                                                                            href="https://www.google.com/url?q=https://www.instagram.com/genneiaar/?hl%3Des&amp;source=gmail-html&amp;ust=1663442996722000&amp;usg=AOvVaw2Pl2j27VbEsCywIr_mGekZ"
+                                                                                            target="_blank"
+                                                                                            rel="noreferrer"><img
+                                                                                                src="https://ci6.googleusercontent.com/proxy/lWzMnaJZ9x7pC9cslkPcQseMsYfBfHMCOWJZx6NLcfEYNc1OKiET9k52a5yAfWNWQZQ0aEUfYbOOSQelkTbQ_A09Lg=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-20.jpg"
+                                                                                                width="33" height="32"
+                                                                                                alt=""></a></td>
+                                                                                    <td align="center"><a
+                                                                                            href="https://www.google.com/url?q=https://www.youtube.com/channel/UCvlbuK7bL-WiTx42N0x0DmA&amp;source=gmail-html&amp;ust=1663442996722000&amp;usg=AOvVaw1lCoWYz6lORPrmWQ6E7svf"
+                                                                                            target="_blank"
+                                                                                            rel="noreferrer"><img
+                                                                                                src="https://ci4.googleusercontent.com/proxy/ERaplYiTFXP101zm_upjTHff7iT6XQeHMYOfCPzS_9WFSN2UbPUHFih-q5fabhvn5nRu-yLSEN6clfUKAhHeNoI4xw=s0-d-e1-ft#http://www.mio-pia.com.ar/Genneia/genneia-21.jpg"
+                                                                                                width="33" height="32"
+                                                                                                alt="Youtube"></a></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <!-- <td>
+                                                                        Para dejar de recibir este newsletter
+                                                                    </td> -->
+                                                                    <td
+                                                                        style="text-align:center;font-size:12px;line-height:20px;padding:15px 0">
+                                                                        <!-- <br><b><a href="*|UNSUB|*" style="color:#000"
+                                                                                rel="noreferrer">cancela la suscripción aquí</a></b></td> -->
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+    </div>
+
+</body>
+
+</html>
